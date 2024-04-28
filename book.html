@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>book-button - Travel Planner</title>
+  <script src="https://kit.fontawesome.com/5e2eda99d7.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+    font: sans-serif;
+    background-color: #f8f8f8;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  header {
+    background-color:  rgb(46, 45, 45);
+    color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  header .logo a {
+    text-decoration: none;
+    color: #f8f8f8; /* Change the color to white */
+    background-color: rgb(46, 45, 45);
+    padding: 10px 20px;
+    }
+  
+  
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .about-us{
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+
+  .about-us p {
+  font-size: larger;
+  font: sans-serif;
+  text-align: center;
+  display: flex;
+  }
+
+  main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    font-size: large;
+  }
+  
+  section {
+    flex: 1 1 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333;
+    border: 1px solid black;
+  }
+
+  section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color:  rgb(46, 45, 45);
+    color: #f8f8f8;
+    border: none;
+    cursor: pointer;
+  }
+  .popup {
+    font-size: larger;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 800px;
+    max-height: 90%;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.767);
+    overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .popup {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+#closePop {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+  
+  footer {
+    background-color: #f8f8f8;
+    color: black;
+    text-align-last: center;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="TRAVEL PLANNER.html">TRAVEL PLANNER</a></div>
+    <h1>Book Us</h1>
+  </header>
+  <div class="about-us">
+    <p>Welcome to Travel Planner, your go-to website for planning your dream vacations. We are passionate about travel and want to help you create unforgettable experiences all around the world, Our team of travel experts is dedicated to curating the best travel itineraries, providing useful travel tips, and offering personalized recommendations based on your preferences.
+    Whether you're looking for a relaxing beach getaway, a thrilling adventure, or an immersive cultural experience, we've got you covered. Let us take care of the details, so you can focus on making memories. Join us on this journey of exploration and discovery. Start planning your next adventure with Travel Planner today!
+  </p>
+  </div>
+  <main>
+    <section class="book-button">
+        <h2>Get In Tourch</h2>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required/>
+
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" required/>
+
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="4"></textarea>
+
+          <button type="submit">Send Message</button>
+      </form>
+        <div class="popup" id="pop">
+            <label>Thank You for subscribing!!!</label>
+            <button id="closePop" onclick="closePopUpFunction()">cancel</button>
+        </div>
+    </section>
+    <section>
+      <h2>Contact Information</h2>
+      <p>Name: Kolawole Joy</p>
+      <p>Email: <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">joykolawole99@gmail.com</a> </p>
+      <p>Phone: +234 901 688 1918</p>
+      <p>Address: no 5 Agbedejobi Community, Ajebo Road, Ogun State.</p>
+      <a href="https://wa.link/a3nfgo"><i class="fa-brands fa-square-whatsapp"></i></a>
+      <a href="https://github.com/dashboard"><i class="fa-brands fa-square-github"></i></a>
+      <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+</section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Travel Planner. All rights reserved.</p>
+    <p>@kojoi</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
